@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <title>Exploring Crop Yield Predication Using ML Techniques</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+  <!-- Additional CSS Files -->
+  <link rel="stylesheet" href="static/assets/css/fontawesome.css">
+  <link rel="stylesheet" href="static/assets/css/templatemo-plot-listing.css">
+  <link rel="stylesheet" href="static/assets/css/animated.css">
+  <link rel="stylesheet" href="static/assets/css/owl.css">
+  <!--
+
+  TemplateMo 564 Plot Listing
+
+  https://templatemo.com/tm-564-plot-listing
+
+  -->
+</head>
+
+<body>
+
+<!-- ***** Preloader Start ***** -->
+
+<!-- ***** Preloader End ***** -->
+
+<!-- ***** Header Area Start ***** -->
+<header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
+  <div class="container" style="padding-top: 5px;">
+    <div class="row">
+      <div class="col-12">
+        <nav class="main-nav">
+          <!-- ***** Logo Start ***** -->
+          <h1 style="text-align:center"> <b><a class="navbar-brand" href="index.html" style="color:red; font-size:30px">Exploring Crop Yield Prediction <span style="color:white;"> Using ML Techniques </span></a></b></h1>
+          <a href="index.html">
+          </a>
+          <!-- ***** Logo End ***** -->
+          <!-- ***** Menu Start ***** -->
+          <ul class="nav">
+            <li><a href="/" style="font-weight: bolder;font-size=20px">Home</a></li>
+            <li><a href="/about" style="font-weight: bolder;font-size=20px">Details</a></li>
+            <li><a href="/login" class="active"style="font-weight: bolder;font-size=20px">Sign in</a></li>
+<!--            <li><a href="/registration">Registration</a></li>-->
+            <!--              <li><div class="main-white-button"><a href="#"><i class="fa fa-plus"></i> Add Your Listing</a></div></li> -->
+          </ul>
+          <a class='menu-trigger'>
+            <span>Menu</span>
+          </a>
+          <!-- ***** Menu End ***** -->
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- ***** Header Area End ***** -->
+<head>
+  <style>
+h2 {
+  text-shadow: 2px 2px 8px black;
+}
+h3 {
+  text-shadow: 2px 2px 8px black;
+}
+</style>
+</head>
+<center>
+  <div class="page-heading2">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="top-text header-text">
+            <center><h2 style="color:yellow; font-size:50px">REGISTER YOUR ACCOUNT</h2></center>
+            <!--&lt;!&ndash;            <h2>Item listings of Different Categories</h2>&ndash;&gt;-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--   <div class="slider-area slider-height" data-background="static/assets/images/e7.jpg">-->
+  <div class="slider-active">
+    <!-- Single Slider -->
+    <div class="single-slider">
+      <div class="slider-cap-wrapper">
+        <div class="hero__caption">
+          <!--                            <p data-animation="fadeInLeft" data-delay=".2s">Login with our services</p>-->
+          <div class="mb-3">
+                                            <center><h3>{{msg}}</h3></center>
+            {% block body %}
+            {% if msg =='Invalid Credentials' %}
+            <h3>Please provide valid credentials</h3>
+            {% elif msg=='Registration Successfull' %}
+            <h3>Registration Successful</h3>
+            {% endif %}
+            {% endblock %}
+            <form class="modal-content animate" action="{{url_for('registration')}}" method="post">
+              <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+<!--                <img src="static/assets/images/e22.png">-->
+              </div>
+
+              <div class="container">
+                <label for="name"><b>Enter Your Name</b></label>
+                <input type="text" placeholder="Enter name" name="name" required="required" style="margin-left: 50px;"><br><br>
+
+                <label for="email"><b>Enter Your Email</b></label>
+                <input type="email" placeholder="Enter Email" name="email" required="required"  title="we need perfect email id only" style="height: 45px;width: 210px;margin-left: 50px;"><br><br>
+
+                <label for="psw"><b>Enter Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required="required"pattern="{8,}" title="Must contain  at least 8 or more characters" style="margin-left: 50px;"><br><br>
+
+                <label for="cpsw"><b>Confirm Password</b></label>
+                <input type="password" placeholder="confirm Password" name="cpsw" required="required"pattern="{8,}" title="Must contain  at least 8 or more characters"style="margin-left: 30px;"><br><br>
+
+                <button type="submit">Register</button>
+<!--                <label>-->
+<!--                  <input type="checkbox" checked="checked" name="remember"> Remember me-->
+<!--                </label>-->
+              </div>
+
+<!--              <div class="container" style="background-color:#f1f1f1">-->
+<!--                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>-->
+<!--                <span class="psw">Forgot <a href="#">password?</a></span>-->
+<!--              </div>-->
+            </form>
+
+
+
+          <div class="hero__img">
+
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+  </div></center>
+
+<!-- Scripts -->
+<script src="static/vendor/jquery/jquery.min.js"></script>
+<script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="static/assets/js/owl-carousel.js"></script>
+<script src="static/assets/js/animation.js"></script>
+<script src="static/assets/js/imagesloaded.js"></script>
+<script src="static/assets/js/custom.js"></script>
+
+</body>
+
+</html>

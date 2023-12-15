@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <title>Exploring Crop Yield Predication Using ML Techniques</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="static/assets/css/fontawesome.css">
+    <link rel="stylesheet" href="static/assets/css/templatemo-plot-listing.css">
+    <link rel="stylesheet" href="static/assets/css/animated.css">
+    <link rel="stylesheet" href="static/assets/css/owl.css">
+    <!--
+
+    TemplateMo 564 Plot Listing
+
+    https://templatemo.com/tm-564-plot-listing
+
+    -->
+</head>
+
+<body>
+
+<!-- ***** Preloader Start ***** -->
+
+<!-- ***** Preloader End ***** -->
+
+<!-- ***** Header Area Start ***** -->
+<header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
+    <div class="container" style="padding-top: 5px;">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <!-- ***** Logo Start ***** -->
+                   <h1 style="text-align:center"> <b><a class="navbar-brand" href="index.html" style="color:red; font-size:30px">Exploring Crop Yield Prediction <span style="color:white;"> Using ML Techniques</span></a></b></h1>
+                    <a href="index.html">
+                    </a>
+                    <!-- ***** Logo End ***** -->
+                    <!-- ***** Menu Start ***** -->
+                    <ul class="nav">
+                        <li><a href="/loginhome" class="active" style="font-weight: bolder;font-size=20px">Home</a></li>
+                        <li><a href="/upload" style="font-weight: bolder;font-size=20px">Upload</a></li>
+                        <li><a href="/viewdata" style="font-weight: bolder;font-size=20px">viewdata</a></li>
+                        <li><a href="/preprocessing" style="font-weight: bolder;font-size=20px">Preprocessing</a></li>
+                        <li><a href="/model" style="font-weight: bolder;font-size=20px">Model</a></li>
+                        <li><a href="/prediction" style="font-weight: bolder;font-size=20px">prediction</a></li>
+                        <li><a href="/" style="font-weight: bolder;font-size=20px">Logout</a></li>
+                    </ul>
+                    <a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+                    <!-- ***** Menu End ***** -->
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- ***** Header Area End ***** -->
+<head>
+    <style>
+h2 {
+  text-shadow: 2px 2px 8px black;
+}
+h3 {
+  text-shadow: 2px 2px 4px black;
+}
+</style>
+</head>
+<center>
+    <div class="page-heading4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="top-text header-text">
+                        <center><h2 style="color:yellow; font-size:50px">Training and Performance of a model</h2><br><br><br>
+                         <center>
+                             <h3 style="color:red; font-size:40px"><b>{{msg}}</b></h3>
+                                            </center>
+                        </center>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="slider-active">
+        <!-- Single Slider -->
+        <div class="single-slider">
+            <div class="slider-cap-wrapper">
+                <div class="hero__caption">
+
+                    <div class="mb-3">
+
+                        <section class="about-section py-5">
+                            <div class="container py-lg-4 pt-3">
+                                <div class="row justify-content-center text-center">
+                                    <div class="col-md-8">
+                                        <div class="section-heading mb-sm-5 mb-4">
+
+
+                                            <form action="{{url_for('model')}}" method="post" >
+
+                                                <label><h6 style="color:black;font-size:35px;"><b>Select your Algorithm</b></h6></label>&nbsp&nbsp&nbsp&nbsp<br><br><br>
+                                                <select name="algo" style="height: 30px;">
+                                                    <option value="0">choose an Algorithm</option>
+                                                    <option value="1">Bagging Regressor</option>
+                                                    <option value="2">SVR</option>
+                                                    <option value="3">KNeighbors Regressor </option>
+                                                    
+                                                    
+                                                    <option value="4">ExtraTreeRegressor </option>
+
+
+                                                </select><br><br>
+
+                                                &nbsp<input type="submit" value="Submit" class="btn btn-primary"></i></input>
+                                            </form>
+
+                                            <!-- Scripts -->
+                                            <script src="static/vendor/jquery/jquery.min.js"></script>
+                                            <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+                                            <script src="static/assets/js/owl-carousel.js"></script>
+                                            <script src="static/assets/js/animation.js"></script>
+                                            <script src="static/assets/js/imagesloaded.js"></script>
+                                            <script src="static/assets/js/custom.js"></script>
+
+</body>
+
+</html>

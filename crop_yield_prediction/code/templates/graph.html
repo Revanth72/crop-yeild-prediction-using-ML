@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <title>Exploring Crop Yield Predication Using ML Techniques</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="static/assets/css/fontawesome.css">
+    <link rel="stylesheet" href="static/assets/css/templatemo-plot-listing.css">
+    <link rel="stylesheet" href="static/assets/css/animated.css">
+    <link rel="stylesheet" href="static/assets/css/owl.css">
+<!--
+
+TemplateMo 564 Plot Listing
+
+https://templatemo.com/tm-564-plot-listing
+
+-->
+  </head>
+
+<body>
+
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
+    <div class="container" style="padding-top: 5px;">
+      <div class="row">
+        <div class="col-12">
+          <nav class="main-nav">
+            <!-- ***** Logo Start ***** -->
+            <h1 style="text-align:center"> <b><a class="navbar-brand" href="index.html" style="color:red; font-size:30px">Exploring Crop Yield Prediction <span style="color:white;"> Using ML Techniques </span></a></b></h1>
+            <a href="index.html">
+            </a>
+            <!-- ***** Logo End ***** -->
+            <!-- ***** Menu Start ***** -->
+            <ul class="nav">
+              <li><a href="/" style="font-weight: bolder;font-size=20px;cplor:white;">LOGOUT</a></li>
+
+            </ul>
+            <a class='menu-trigger'>
+                <span>Menu</span>
+            </a>
+            <!-- ***** Menu End ***** -->
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+  <head>
+<style>
+h2 {
+  text-shadow: 2px 2px 8px black;
+}
+h3 {
+  text-shadow: 2px 2px 8px black;
+}
+</style>
+</head>
+
+
+  <div class="page-headin" >
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="top-text header-text">
+         <br><br><br> <br><br><br> <br><br><br> <br><br><br>
+               <div class="top-text header-text">
+           <center>  <form action="{{url_for('graph')}}" method="post">
+                            <select name="modelgraph" style="height: 50px;width: 150px;">
+                                <option value="nomodel">Select</option>
+                                <option value="r2score" >R2_score</option>
+                                <option value="time" >Time</option>
+
+                            </select>
+                            <br><br>
+                        <input type="submit" value="submit" class="btn btn-primary" style="height: 40px;width: 150px;">
+                    </form>
+           </center></div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+{% if modelname == 'r2score' %}
+<img src="{{url_for('static',filename='assets/images/r2_score.JPG')}}" alt="#">
+{% elif modelname=='time'%}
+<img src="{{url_for('static',filename='assets/images/time.JPG')}}" alt="#">
+
+{% endif %}
+
+
+  <!-- Scripts -->
+  <script src="static/vendor/jquery/jquery.min.js"></script>
+  <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="static/assets/js/owl-carousel.js"></script>
+  <script src="static/assets/js/animation.js"></script>
+  <script src="static/assets/js/imagesloaded.js"></script>
+  <script src="static/assets/js/custom.js"></script>
+
+</body>
+
+</html>

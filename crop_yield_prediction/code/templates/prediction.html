@@ -1,0 +1,309 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <title>Exploring Crop Yield Predication Using ML Techniques</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="static/assets/css/fontawesome.css">
+    <link rel="stylesheet" href="static/assets/css/templatemo-plot-listing.css">
+    <link rel="stylesheet" href="static/assets/css/animated.css">
+    <link rel="stylesheet" href="static/assets/css/owl.css">
+    <!--
+
+    TemplateMo 564 Plot Listing
+
+    https://templatemo.com/tm-564-plot-listing
+
+    -->
+</head>
+
+<body>
+
+<!-- ***** Preloader Start ***** -->
+
+<!-- ***** Preloader End ***** -->
+
+<!-- ***** Header Area Start ***** -->
+<header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
+    <div class="container" style="padding-top: 5px;">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <!-- ***** Logo Start ***** -->
+                    <h1 style="text-align:center"> <b><a class="navbar-brand" href="index.html" style="color:red; font-size:30px">Exploring Crop Yield Prediction <span style="color:white;"> Using ML Techniques </span></a></b></h1>
+                    <a href="index.html">
+                    </a>
+                    <!-- ***** Logo End ***** -->
+                    <!-- ***** Menu Start ***** -->
+                    <ul class="nav">
+                        <li><a href="/loginhome" class="active" style="font-weight: bolder;font-size=20px;">Home</a></li>
+                        <li><a href="/upload" style="font-weight: bolder;font-size=20px">Upload</a></li>
+                        <li><a href="/viewdata" style="font-weight: bolder;font-size=20px">viewdata</a></li>
+                        <li><a href="/preprocessing" style="font-weight: bolder;font-size=20px">Preprocessing</a></li>
+                        <li><a href="/model" style="font-weight: bolder;font-size=20px">Model</a></li>
+                        <li><a href="/prediction" style="font-weight: bolder;font-size=20px">prediction</a></li>
+                        <li><a href="/graph" style="font-weight: bolder;font-size=20px">Graph</a></li>
+                        <li><a href="/" style="font-weight: bolder;font-size=20px;color:white;">Logout</a></li>
+                    </ul>
+                    <a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+                    <!-- ***** Menu End ***** -->
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- ***** Header Area End ***** -->
+<head>
+    <style>
+h2 {
+  text-shadow: 2px 2px 10px black;
+}
+h3 {
+  text-shadow: 2px 2px 8px black;
+}
+</style>
+</head>
+<center>
+    <div class="page-heading6">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="top-text header-text">
+                        <center><h2 style="color:yellow; font-size:50px">PREDICTION</h2></center><br><br><br>
+
+                        <center><h3 style="color:red; font-size:50px">{{msg}}</h3></center>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="slider-active">
+        <!-- Single Slider -->
+        <div class="single-slider">
+            <div class="slider-cap-wrapper">
+                <div class="hero__caption">
+
+                    <div class="mb-3">
+
+
+                        <section class="about-section py-5">
+                            <div class="container py-lg-4 pt-3">
+                                <div class="row justify-content-center text-center">
+                                    <div class="col-md-8">
+                                        <div class="section-heading mb-sm-5 mb-4">
+
+
+                                            <form action="{{url_for('prediction')}}" method="post" >
+
+
+<!--                                                <input type="number" name="State" placeholder="State" style="margin-top: 20px;height: 40px;">-->
+                                                  <label><h6 style="color:black;font-size:35px;"><b>Select your Algorithm</b></h6></label>&nbsp&nbsp&nbsp&nbsp<br><br><br>
+                                                  <select name="algo" style="height: 30px;">
+                                                    <option value="0">Choose an Algorithm</option>
+                                                   
+                                                    <option value="4">ExtraTreeRegressor </option>
+
+
+                                                  </select><br><br>
+                                                  <select name="State" style="height: 50px;width: 190px;width: 190px;">
+                                                     <option value="0">Select an State</option>
+                                                      <option value="0">Andaman and Nicobar Islands</option>
+                                                    <option value="1">Arunachal Pradesh</option>
+                                                    <option value="2">Bihar</option>
+                                                    <option value="3">Chhattisgarh</option>
+                                                    <option value="4">Himachal Pradesh</option>
+                                                    <option value="5">Jammu and Kashmir</option>
+                                                    <option value="6">Jharkhand</option>
+                                                    <option value="7">Kerala</option>
+                                                    <option value="8">Odisha</option>
+                                                    <option value="9">Punjab</option>
+                                                      <option value="10">Tamil Nadu</option>
+                                                      <option value="11">Uttarakhand</option>
+
+                                                </select>
+                                                 <select name="Year" style="height: 50px;width: 190px;width: 190px;">
+                                                     <option value="0">Select Year</option>
+                                                      <option value="1990">1990</option>
+                                                    <option value="1991">1991</option>
+                                                    <option value="1992">1992</option>
+                                                    <option value="1993">1993</option>
+                                                    <option value="1994">1994</option>
+                                                    <option value="1995">1995</option>
+                                                     <option value="1996">1996</option>
+                                                    <option value="1997">1997</option>
+                                                    <option value="1998">1998</option>
+                                                    <option value="1999">1999</option>
+                                                    <option value="2000">2000</option>
+                                                      <option value="2001">2001</option>
+                                                      <option value="2002">2002</option>
+                                                      <option value="2003">2003</option>
+                                                      <option value="2004">2004</option>
+                                                      <option value="2005">2005</option>
+                                                      <option value="2006">2006</option>
+                                                      <option value="2007">2007</option>
+                                                      <option value="2008">2008</option>
+                                                      <option value="2009">2009</option>
+                                                      <option value="2010">2010</option>
+                                                      <option value="2011">2011</option>
+                                                      <option value="2012">2012</option>
+                                                      <option value="2013">2013</option>
+                                                      <option value="2014">2014</option>
+                                                     <option value="2015">2015</option>
+                                                      <option value="2016">2016</option>
+
+
+                                                </select>
+
+                                                 <select name="Season" style="height: 50px;width: 190px;width: 190px;">
+                                                     <option value="0">Select season</option>
+                                                      <option value="0">Autumn</option>
+                                                    <option value="1">Kharif</option>
+                                                    <option value="2">Rabi</option>
+                                                    <option value="3">Summer</option>
+                                                    <option value="4">Whole Year</option>
+                                                    <option value="5">Winter</option>
+
+                                                </select>
+
+                                                <select name="Crop" style="height: 50px;width: 190px;width: 190px;">
+                                                     <option value="0">Select crop</option>
+                                                      <option value="0">Arecanut</option>
+                                                    <option value="1">Arhar/Tur</option>
+                                                    <option value="2">Bajra</option>
+                                                    <option value="3">Banana</option>
+                                                    <option value="4">Barley</option>
+                                                    <option value="5">Beans & Mutter(Vegetable)</option>
+                                                    <option value="6">Bhindi</option>
+                                                    <option value="7">Black pepper</option>
+                                                    <option value="8">Blackgram</option>
+                                                    <option value="9">Brinjal</option>
+                                                    <option value="10">Cabbage</option>
+                                                    <option value="11">Cardamom</option>
+                                                    <option value="12">Carrot</option>
+                                                    <option value="13">Cashewnut</option>
+                                                    <option value="14">Cashewnut Raw</option>
+                                                    <option value="15">Castor seed</option>
+                                                    <option value="16">Citrus Fruit</option>
+                                                    <option value="17">Coconut</option>
+                                                    <option value="18">Coffee</option>
+                                                    <option value="19">Cond-spcs other</option>
+                                                    <option value="20">Coriander</option>
+                                                    <option value="21">Cotton(lint)</option>
+                                                    <option value="22">Drum Stick</option>
+                                                    <option value="23">Dry chillies</option>
+                                                    <option value="24">Dry ginger</option>
+                                                    <option value="25">Garlic</option>
+                                                    <option value="26">Ginger</option>
+                                                    <option value="27">Gram</option>
+                                                    <option value="28">Grapes</option>
+                                                    <option value="29">Groundnut</option>
+                                                    <option value="30">Guar seed</option>
+                                                    <option value="31">Horse-gram</option>
+                                                    <option value="32">Jack Fruit</option>
+                                                    <option value="33">Jowar</option>
+                                                    <option value="34">Jute</option>
+                                                    <option value="35">Khesari</option>
+                                                    <option value="36">Korra</option>
+                                                    <option value="37">Lentil</option>
+                                                    <option value="38">Linseed</option>
+                                                    <option value="39">Maize</option>
+                                                    <option value="40">Mango</option>
+                                                    <option value="41">Masoor</option>
+                                                    <option value="42">Mesta</option>
+                                                    <option value="43">Moong(Green Gram)</option>
+                                                    <option value="44">Moth</option>
+                                                    <option value="45">Niger seed</option>
+                                                    <option value="46">Oilseeds total</option>
+                                                    <option value="47">Onion</option>
+                                                    <option value="48">Orange</option>
+                                                    <option value="49">Other  Rabi pulses</option>
+                                                    <option value="50">Other Cereals & Millets</option>
+                                                    <option value="51">Other Kharif pulses</option>
+                                                    <option value="52">Other Vegetables</option>
+                                                    <option value="53">Paddy</option>
+                                                    <option value="54">Papaya</option>
+                                                    <option value="55">Peas & beans (Pulses)</option>
+                                                    <option value="56">Pineapple</option>
+                                                    <option value="57">Pome Fruit</option>
+                                                    <option value="58">Potato</option>
+                                                    <option value="59">Pulses total</option>
+                                                    <option value="60">Ragi</option>
+                                                    <option value="61">Rapeseed &Mustard</option>
+                                                    <option value="62">Redish</option>
+                                                    <option value="63">Rice</option>
+                                                    <option value="64">Rubber</option>
+                                                    <option value="65">Safflower</option>
+                                                    <option value="66">Samai</option>
+                                                    <option value="67">Sannhamp</option>
+                                                    <option value="68">Sesamum</option>
+                                                    <option value="69">Small millets</option>
+                                                    <option value="70">Soyabean</option>
+                                                    <option value="71">Sugarcane</option>
+                                                    <option value="72">Sunflower</option>
+                                                    <option value="73">Sweet potato</option>
+                                                    <option value="74">Tapioca</option>
+                                                    <option value="75">Tea</option>
+                                                    <option value="76">Tobacco</option>
+                                                    <option value="77">Tomato</option>
+                                                    <option value="78">Total foodgrain</option>
+                                                    <option value="79">Turmeric</option>
+                                                    <option value="80">Turnip</option>
+                                                    <option value="81">Urad</option>
+                                                    <option value="82">Varagu</option>
+                                                    <option value="83">Wheat</option>
+                                                    <option value="84">other misc. pulses</option>
+                                                    <option value="85">other oilseeds</option>
+
+                                                </select>
+                                                
+                                                <input type="number" name="Area" placeholder="Area" style="margin-top: 20px;height: 40px;">
+
+                                                <input type="number" name="Rainfall" placeholder="Rainfall" style="margin-top: 20px;height: 40px;"><br><br>
+
+
+                                                &nbsp<input type="submit" value="Submit" class="btn btn-primary" style="width: 150px;height: 30px;"></i></input>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</center>
+</form>
+
+
+
+<!-- Scripts -->
+<script src="static/vendor/jquery/jquery.min.js"></script>
+<script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="static/assets/js/owl-carousel.js"></script>
+<script src="static/assets/js/animation.js"></script>
+<script src="static/assets/js/imagesloaded.js"></script>
+<script src="static/assets/js/custom.js"></script>
+
+</body>
+
+</html>
